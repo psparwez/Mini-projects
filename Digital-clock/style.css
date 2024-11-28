@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: #111;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  height: 150px;
+  width: 450px;
+  margin:  0 auto;
+  position: relative;
+  top: 10rem;
+  background: #fff;
+  color: #000;
+  border-radius: 10px;
+  z-index: 999;
+}
+.red-light {
+  position: absolute;
+  right: 70px;
+  top: 40px;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  background: red;
+  box-shadow: 0 0 10px rgb(255, 44, 44);
+}
+/* For Javascript  */
+.red-light.blink {
+  animation: blink 1s ease infinite;
+  animation-delay: 0s;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.container .clock {
+  height: 100%;
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .clock h2 {
+  font-size: 3.2rem;
+  color: #000;
+  user-select: none;
+}
+.container .clock h2:nth-child(odd) {
+  padding: 5px 10px;
+  /* Default Color & Bg */
+  /* background: #000;
+  color: #fff; */
+  border-radius: 10px;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+#hour {
+  background: #33ff6914;
+  color: green;
+}
+#minutes {
+  background: #3385ff14;
+  color: rgb(0, 64, 128);
+}
+#seconds {
+  background: #ff333314;
+  color: red;
+}
+#ampm {
+  position: relative;
+  margin-left: 10px;
+  top: 25px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  text-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  color: #292929;
+  letter-spacing: 1px;
+}
+.dot {
+  padding: 4px 8px;
+  background: #ffffff38;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    width: 90%;
+    height: 100px;
+  }
+  .container .clock h2 {
+    font-size: 2rem;
+  }
+}
