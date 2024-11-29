@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <!-- || ** CUSTOME CSS  -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo__container">
+        <div class="logo"></div>
+      </div>
+      <div class="panel__container">
+        <div class="panel">
+          <h1 class="heading">Create an account</h1>
+          <div class="sub__heading">
+            Already have an account? <a href="login.html">Sign In</a>
+          </div>
+
+          <form action="" onsubmit="alert('Success')">
+            <div class="input__box">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+              <div class="input__indicator"></div>
+            </div>
+            <div class="name dbl__wrapper">
+              <div class="input__box">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required />
+                <div class="input__indicator"></div>
+              </div>
+              <div class="input__box">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required />
+
+                <div class="input__indicator"></div>
+              </div>
+            </div>
+
+            <div class="password dbl__wrapper">
+              <div class="input__box">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+                <div class="input__indicator"></div>
+              </div>
+
+              <div class="input__box">
+                <label for="confirmPassword">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                />
+                <div class="input__indicator"></div>
+              </div>
+            </div>
+
+            <div class="date__of__birth dbl__wrapper">
+              <h6 class="dob__heading">Date of Birth</h6>
+
+              <div class="dob__input-box">
+                <div class="dropdown">
+                  <label for="month">Month</label>
+
+                  <select name="month" id="month" required>
+                    <option value="January">January</option>
+                    <option value="February">February</option>
+                    <option value="March">March</option>
+                    <option value="April">April</option>
+                    <option value="May">May</option>
+                    <option value="June">June</option>
+                    <option value="July">July</option>
+                    <option value="August">August</option>
+                    <option value="September">September</option>
+                    <option value="October">October</option>
+                    <option value="November">November</option>
+                    <option value="December">December</option>
+                  </select>
+                </div>
+                <div class="input__box">
+                  <label for="day">Day</label>
+                  <input
+                    type="number"
+                    id="day"
+                    name="day"
+                    min="1"
+                    max="31"
+                    required
+                  />
+                  <div class="input__indicator"></div>
+                </div>
+                <div class="input__box">
+                  <label for="year">Year</label>
+                  <input
+                    type="number"
+                    id="year"
+                    name="year"
+                    min="1900"
+                    max="2024"
+                    required
+                  />
+                  <div class="input__indicator"></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="consents">
+              By cliking Create account, I agree that I have read and accepted
+              <a href="#">Terms of Use </a> and <a href="#">Privacy Policy</a>
+            </p>
+
+            <button type="submit">Create account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

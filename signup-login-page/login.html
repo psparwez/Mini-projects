@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <!-- GOOGLE FONT  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CUSTOME CSS  -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="logo__container">
+        <div class="logo"></div>
+      </div>
+      <div class="panel__container">
+        <div class="panel">
+          <h1 class="heading">Welcome back, Again!</h1>
+          <div class="sub__heading">
+            Don't have an account yet? <a href="index.html">Sign Up</a>
+          </div>
+
+          <form action="" onsubmit="alert('Success')">
+            <div class="input__box">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" required />
+              <div class="input__indicator"></div>
+            </div>
+
+            <div class="input__box">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required />
+              <div class="input__indicator"></div>
+            </div>
+
+            <p class="consents">
+              By cliking login account, I agree that I have read and accepted
+              <a href="#">Terms of Use </a> and <a href="#">Privacy Policy</a>
+            </p>
+
+            <button type="submit">Log In</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
