@@ -1,0 +1,127 @@
+:root {
+  --primary-color: #ee472d;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: transparent;
+  background-image: -o-linear-gradient(48deg, #111111, #101010);
+  background-image: linear-gradient(42deg, #111111, #101010);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body,
+.ue_neon_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.ue_neon_btn {
+  padding: 15px 30px 15px 30px;
+  background-color: #313131;
+  color: var(--primary-color);
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  position: relative;
+  border-radius: 40px;
+  overflow: visible;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+  text-decoration: none;
+}
+
+.ue_neon_btn::before,
+.ue_neon_btn::after {
+  content: "";
+  position: absolute;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  border-radius: 40px;
+  width: 100%;
+  height: 100%;
+  translate: -50% -50%;
+  left: 50%;
+  top: 50%;
+
+  background: conic-gradient(
+    from var(--angle),
+    #ff003700 50deg,
+    var(--primary-color) 360deg
+  );
+
+  -webkit-animation: rotateuc_neon_glowing_button_effect 2000ms linear infinite;
+  animation: rotateuc_neon_glowing_button_effect 2000ms linear infinite;
+
+  -webkit-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.ue_neon_btn::before {
+  z-index: -2;
+  -webkit-filter: blur(20px) brightness(1);
+  filter: blur(20px) brightness(1);
+}
+.ue_neon_btn::after {
+  border-radius: calc(40px + 2px);
+  z-index: -1;
+  padding: 1px;
+  --angle: 0deg;
+}
+.ue_neon_btn:hover {
+  background-color: var(--primary-color);
+  color: #000000;
+}
+.ue_neon_btn:hover::before,
+.ue_neon_btn:hover::after {
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  background: conic-gradient(
+    from var(--angle),
+    var(--primary-color) 0deg,
+    var(--primary-color) 360deg
+  );
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@property --hueuc_neon_glowing_button_effect {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@-webkit-keyframes rotateuc_neon_glowing_button_effect {
+  0% {
+    --angle: 0deg;
+  }
+  50% {
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
+@keyframes rotateuc_neon_glowing_button_effect {
+  0% {
+    --angle: 0deg;
+  }
+  50% {
+  }
+  100% {
+    --angle: 360deg;
+  }
+}
