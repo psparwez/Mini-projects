@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+.hamburger {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  background: #fff;
+  -webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+
+  display: -webkit-box;
+
+  display: -ms-flexbox;
+
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+.hamburger span {
+  position: absolute;
+  width: 40px;
+  height: 4px;
+  background: #1863ff;
+  border-radius: 4px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.hamburger span:nth-child(1) {
+  -webkit-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  transform: translateY(-15px);
+  width: 25px;
+  left: 15px;
+  -webkit-transition-delay: 0.125s;
+  -o-transition-delay: 0.125s;
+  transition-delay: 0.125s;
+}
+.hamburger.active span:nth-child(1) {
+  width: 40px;
+  -webkit-transform: translateY(0) rotate(45deg);
+  -ms-transform: translateY(0) rotate(45deg);
+  transform: translateY(0) rotate(45deg);
+}
+.hamburger span:nth-child(2) {
+  -webkit-transform: translateY(15px);
+  -ms-transform: translateY(15px);
+  transform: translateY(15px);
+  width: 15px;
+  left: 15px;
+}
+.hamburger.active span:nth-child(2) {
+  width: 40px;
+  -webkit-transform: translateY(0) rotate(315deg);
+  -ms-transform: translateY(0) rotate(315deg);
+  transform: translateY(0) rotate(315deg);
+  -webkit-transition-delay: 0.2s;
+  -o-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+.hamburger.active span:nth-child(3) {
+  -webkit-transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  transform: translateX(60px);
+}
