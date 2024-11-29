@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- || ** Google icon link  -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- || ** Font asesome link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- || ** Custom css  -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>Send us a Massage</header>
+      <form action="">
+        <div class="dbl-field">
+          <div class="field">
+            <input type="text" placeholder="Enter your name" />
+            <i class="fas fa-user"></i>
+          </div>
+          <div class="field">
+            <input type="email" placeholder="Enter your email" />
+            <i class="fas fa-envelope"></i>
+          </div>
+        </div>
+        <div class="dbl-field">
+          <div class="field">
+            <input type="number" placeholder="Enter your number" />
+            <i class="fas fa-phone-alt"></i>
+          </div>
+          <div class="field">
+            <input type="text" placeholder="Enter your website" />
+            <i class="fas fa-globe"></i>
+          </div>
+        </div>
+        <div class="massage">
+          <textarea name="" id="" placeholder="Write your message"></textarea>
+          <i class="material-symbols-outlined"> chat </i>
+        </div>
+        <div class="button-area">
+          <button type="submit">Send Massage</button>
+          <span data-loading-message id="loading-message"
+            >Sending your massage...</span
+          >
+        </div>
+      </form>
+    </div>
+
+    <!-- || ** Custom JS  -->
+    <script src="./main.js"></script>
+  </body>
+</html>

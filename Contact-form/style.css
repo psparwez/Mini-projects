@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 40px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #0d6efd;
+}
+
+.wrapper {
+  width: 720px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.wrapper header {
+  font-size: 22px;
+  font-weight: 600;
+  padding: 20px 30px;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.wrapper form {
+  margin: 35px 30px;
+}
+
+.wrapper .dbl-field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.dbl-field .field {
+  height: 50px;
+  width: calc(100% / 2 - 13px);
+  position: relative;
+}
+
+form .field input,
+form .massage textarea {
+  height: 100%;
+  width: 100%;
+  outline: none;
+  padding: 0 18px 0 48px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+form .field input::-webkit-input-placeholder,
+form .massage textarea::-webkit-input-placeholder {
+  color: #bfbfbf;
+}
+form .field input::-moz-placeholder,
+form .massage textarea::-moz-placeholder {
+  color: #bfbfbf;
+}
+form .field input:-ms-input-placeholder,
+form .massage textarea:-ms-input-placeholder {
+  color: #bfbfbf;
+}
+form .field input::-ms-input-placeholder,
+form .massage textarea::-ms-input-placeholder {
+  color: #bfbfbf;
+}
+form .field input::placeholder,
+form .massage textarea::placeholder {
+  color: #bfbfbf;
+}
+form .field input:focus,
+form .massage textarea:focus {
+  border: 2px solid #0d6efd;
+}
+.wrapper form i {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color: #bfbfbf;
+  font-size: 17px;
+  pointer-events: none;
+}
+form .field input:focus ~ i,
+form .massage textarea:focus ~ i {
+  color: #0d6efd;
+}
+form .massage {
+  position: relative;
+}
+
+form .massage i {
+  top: 30px;
+  font-size: 20px;
+}
+
+form .massage textarea {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 120px;
+  max-height: 300px;
+  padding: 15px 20px 0 48px;
+}
+
+form .button-area {
+  margin: 25px 0;
+}
+
+.button-area button {
+  padding: 13px 25px;
+  font-size: 18px;
+  border: none;
+  background-color: #0d6efd;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-area span {
+  color: #0d6efd;
+  margin-left: 30px;
+}
+#loading-message {
+  display: none;
+}
+@media (max-width: 600px) {
+  .wrapper header {
+    text-align: center;
+  }
+  .wrapper .dbl-field {
+    margin-bottom: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .dbl-field .field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  form .massage textarea {
+    resize: none;
+  }
+  form .button-area {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .button-area button {
+    width: 100%;
+  }
+  .button-area span {
+    display: block;
+    text-align: center;
+    margin: 20px 0;
+  }
+}
