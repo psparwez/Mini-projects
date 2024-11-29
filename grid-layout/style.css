@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background: #222;
+  background: rgb(34, 34, 34);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-template-areas:
+    "item1 item1 item2"
+    "item3 item4 item4"
+    "item3 item5 item6";
+  transition: all 1s;
+}
+.items {
+  height: 200px;
+  background: #ddd;
+  border-radius: 10px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.item1 {
+  grid-area: item1;
+  background-image: url("https://images.unsplash.com/photo-1716668596098-40ff5f73fb9e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fHw%3D");
+}
+.item2 {
+  grid-area: item2;
+  background-image: url("https://images.unsplash.com/photo-1493612276216-ee3925520721?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fHww");
+}
+
+.item4 {
+  grid-area: item4;
+  background-image: url("https://images.unsplash.com/photo-1562960032-108a6c6c4896?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDExfHx8ZW58MHx8fHx8");
+}
+.item5 {
+  grid-area: item5;
+  background-image: url("https://images.unsplash.com/photo-1508138221679-760a23a2285b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cmFuZG9tfGVufDB8fDB8fHww");
+}
+.item6 {
+  grid-area: item6;
+  background-image: url("https://images.unsplash.com/photo-1717864477200-d4d1f112c792?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDM1fGJvOGpRS1RhRTBZfHxlbnwwfHx8fHw%3D");
+}
+
+.item3 {
+  grid-area: item3;
+  height: 420px;
+  background-image: url("https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fHww");
+}
+
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-areas:
+      "item1 item1 item1"
+      "item2 item2 item2"
+      "item3 item3 item3"
+      "item4 item4 item4"
+      "item5 item5 item5"
+      "item6 item6 item6";
+    grid-template-rows: auto;
+  }
+}
