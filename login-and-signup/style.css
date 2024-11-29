@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: rgb(28, 9, 46);
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(
+    to top right,
+    rgb(136, 72, 255),
+    rgb(40, 194, 255)
+  );
+  padding: 40px 40px 30px 40px;
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.173);
+}
+.logo__container {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+.logo__container .logo {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  background-color: #00000043;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.logo i {
+  font-size: 4.5rem;
+  color: #fff;
+  line-height: 100px;
+  text-align: center;
+}
+form {
+  margin-top: 2rem;
+}
+input {
+  width: 100%;
+  display: block;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 14px 12px;
+  margin-top: 15px;
+  margin-inline: 0;
+  border-radius: 5px;
+  font-size: 17px;
+  color: rgb(248, 252, 255);
+}
+input[type="checkbox"] {
+  accent-color: #145ff5;
+}
+input:focus {
+  /* outline: none; */
+  border-bottom: 1px solid #ccc;
+}
+input:valid {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid #ccc;
+}
+.contest {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 5px;
+  margin-top: 1rem;
+  padding: 0 5px;
+}
+
+.contest input {
+  justify-self: flex-start;
+  margin-top: 0;
+  height: 15px;
+  width: 15px;
+}
+.contest label {
+  color: rgb(208, 234, 255);
+  user-select: none;
+  cursor: pointer;
+}
+
+::placeholder {
+  color: rgb(208, 234, 255);
+}
+
+.btn {
+  margin-top: 1.4rem;
+  display: block;
+  width: 60%;
+  margin-inline: auto;
+  padding: 12px;
+  font-size: 17px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  background: linear-gradient(to right, #0055ff, rgb(5, 198, 252));
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.signup-btn {
+  width: 70%;
+}
+.footer {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(208, 234, 255);
+}
+
+.footer a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: #00ffe1;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.forget__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.forget__container .login {
+  margin-top: 0;
+}
+
+.forget__container .forgot {
+  color: rgb(208, 234, 255);
+  text-decoration: none;
+}
+.forget__container .forgot:hover {
+  text-decoration: underline;
+}
+
+/* Reset Model box  */
+.reset__password__form input {
+  background-color: #fff;
+  color: #111;
+  border: 1px solid #ccc;
+}
+.reset__password__form input::placeholder {
+  color: #999;
+}
+
+/* Reset Bootstrap class btn  */
+
+.container .form .btn:active,
+.container .form .btn:hover,
+.container .form .btn:focus,
+.reset__password__form .btn:active,
+.reset__password__form .btn:hover,
+.reset__password__form .btn:focus {
+  color: #fff;
+  scale: 0.98;
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    padding: 40px 15px 25px 15px;
+    max-width: 95%;
+  }
+}
