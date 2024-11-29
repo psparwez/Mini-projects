@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create account</title>
+
+    <!-- || ** Google font {Poppins} Link  -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- || ** Font awesome cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- || ** Custom css  -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col image">
+          <img src="./assets/images/doggy.jpg" alt="" />
+        </div>
+        <div class="col form__container">
+          <h2 class="title">Create an account</h2>
+          <p class="notice">
+            By clicking the create button, you agree to our terms and
+            conditions. A verification email will be sent to you after account
+            creation.
+          </p>
+          <form action="" class="form">
+            <div class="input__box">
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="First Name"
+                required
+              />
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Last Name"
+                required
+              />
+            </div>
+            <div class="input__box">
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+              />
+              <input
+                type="number"
+                name="num"
+                id="num"
+                placeholder="Mobile No."
+                required
+              />
+            </div>
+            <div class="input__box">
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Password"
+                required
+                minlength="8"
+              />
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm Password"
+              />
+            </div>
+
+            <button class="btn" type="submit">Create Now</button>
+          </form>
+          <div class="hints">
+            <div class="line"></div>
+            <p>Or, continue with</p>
+            <div class="line"></div>
+          </div>
+          <div class="another__methods">
+            <div class="input__box">
+              <a href="#"
+                ><i class="fa-brands fa-google"></i> <span> Google</span></a
+              >
+              <a href="#"
+                ><i class="fa-brands fa-facebook-f"></i>
+                <span> Facebook</span></a
+              >
+            </div>
+          </div>
+          <div class="contents">
+            <p>Already have an account? <a href="login.html">Log In</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
