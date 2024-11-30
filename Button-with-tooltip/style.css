@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap");
+
+:root {
+  --bg-color: linear-gradient(-15deg, #24164f, #9253ff);
+  --rounded: 3rem;
+  --tooltip-bg-color: #1d1c2f;
+  --text-color: #ddc9ff;
+  --tooltip-border-color: #7977a431;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Syne", sans-serif;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #131029;
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  top: 16rem;
+}
+
+.btn {
+  font-size: 1.1rem;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  height: 45px;
+  padding: 0 1.5rem;
+  border-radius: var(--rounded);
+  border: none;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  -webkit-transform: scale(0.96);
+  -ms-transform: scale(0.96);
+  transform: scale(0.96);
+}
+
+.btn::before,
+.btn::after {
+  position: absolute;
+  left: 50%;
+  background: var(--tooltip-bg-color);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  z-index: -1;
+  -webkit-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -o-transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.btn::before {
+  --text: "Tooltip";
+  content: var(--text);
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 8px 1.2rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border-radius: var(--rounded);
+  outline: 1px solid var(--tooltip-border-color);
+  letter-spacing: 1px;
+  font-size: 14px;
+}
+.btn::after {
+  content: "";
+  top: 0;
+  -webkit-transform: translateX(-50%) rotate(-45deg);
+  -ms-transform: translateX(-50%) rotate(-45deg);
+  transform: translateX(-50%) rotate(-45deg);
+  height: 11px;
+  aspect-ratio: 1;
+  border-left: 1px solid var(--tooltip-border-color);
+  border-bottom: 1px solid var(--tooltip-border-color);
+}
+
+.btn:hover::before {
+  top: -3.3rem;
+}
+.btn:hover::after {
+  top: -1.6rem;
+}
+.btn:hover::before,
+.btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
