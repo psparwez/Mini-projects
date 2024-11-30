@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #0984e3;
+}
+
+.mainbox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+label {
+  position: relative;
+  background: #fff;
+  height: 50px;
+  width: 150px;
+  border-radius: 35px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 500;
+  display: block;
+  color: #0984e3;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  gap: 10px;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+label,
+.media-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+label:hover {
+  letter-spacing: 1px;
+}
+
+label::before {
+  content: "Cancel";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  border-radius: 35px;
+  opacity: 0;
+}
+
+label i {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+
+#check {
+  display: none;
+}
+
+#check:checked ~ label::before {
+  opacity: 1;
+}
+
+.media-icons {
+  position: absolute;
+  left: 50%;
+  top: -120px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  background: #fff;
+  width: 140%;
+  height: 110%;
+  text-align: center;
+
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  border-radius: 35px;
+  padding: 4px;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+#check:checked ~ .media-icons {
+  opacity: 1;
+  pointer-events: auto;
+  top: -84px;
+}
+
+.media-icons::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 50%;
+  background: #fff;
+  bottom: -9px;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  z-index: -1;
+}
+
+.media-icons a {
+  font-size: 22px;
+  color: #0984e3;
+}
+.media-icons,
+.media-icons a {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.media-icons a:hover {
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+.media-icons a:nth-child(1):hover {
+  color: #426782;
+}
+
+.media-icons a:nth-child(2):hover {
+  color: #1da1f2;
+}
+
+.media-icons a:nth-child(3):hover {
+  color: #e1306c;
+}
+
+.media-icons a:nth-child(4):hover {
+  color: #ff0000;
+}
