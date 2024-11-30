@@ -1,0 +1,87 @@
+:root {
+  --body-bg-color: #212121;
+  --circle-color: #accaff36;
+  --spinner-color: #accaff;
+
+  --border-width: 5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 1em;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100vw;
+  background: var(--body-bg-color);
+}
+
+.circle-container {
+  position: relative;
+  height: 70px;
+  width: 70px;
+}
+
+.circle-progress,
+.circle-progress::before {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: var(--border-width) solid transparent;
+}
+
+.circle-progress {
+  border-color: var(--circle-color);
+}
+
+.circle-progress::before {
+  content: "";
+  border-color: transparent;
+  border-top-color: var(--spinner-color);
+  top: -5px;
+  left: -5px;
+  -webkit-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
